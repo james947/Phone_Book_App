@@ -16,9 +16,9 @@ class Phone:
 
     #delete contact
     def delete(self,name):
-        if name in self.contacts:
-            self.contacts.remove(name)
-            return {"message":"Contact deleted succesfully"}
+        found=[name for name in  self.contacts if name==name][0]
+        self.contacts.remove(found)
+        return {"message":"Contact deleted succesfully"}
 
     #view contacts
     def view_contacts(self):
@@ -27,7 +27,7 @@ class Phone:
 
     #update contacts
     def update_contacts(self,name,number):
-
+        
         return {"message":"Contact updated succesfully"}
 
 
@@ -39,9 +39,9 @@ class Phone:
 x=Phone()
 x.add_new('james',444)
 #print(x)
-#x.delete('james')
+x.delete('james')
 #x.view_contacts()
-x.update_contacts('james',888)
+#x.update_contacts('james',888)
 #p.delete_no('linda',555)
 #x.delete_no('james',555)
 
