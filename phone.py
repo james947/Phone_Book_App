@@ -10,7 +10,15 @@ class Phone:
         add =dict(number=number,name=name)
         self.contacts.append(add)
         return {"message":"Business added succesfully"}
+    #delete contact
+    def delete(self,name):
+        if name in self.contacts:
+            self.contacts.remove(name)
+            return {"message":"Contact deleted succesfully"}
 
+    def view_contacts(self):
+        for numbers in self.contacts:
+            return numbers
 
     
 
