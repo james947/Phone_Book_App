@@ -6,7 +6,7 @@ class PhoneTestCase(unittest.TestCase):
 #tests if number is added 
     def test_add_new_number(self):
         new = Phone()
-        response=new.add_new(name="james",number=555)git 
+        response=new.add_new(name="james",number=555)
         self.assertEqual(response['message'], "Business added succesfully")
 #removes contacts from list
     def test_delete_contact(self):

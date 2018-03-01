@@ -27,7 +27,9 @@ class Phone:
 
     #update contacts
     def update_contacts(self,name,number):
-        
+        found=[name for name in  self.contacts if name==name][0]
+        self.contacts[name] = name 
+        self.contacts[number] = number
         return {"message":"Contact updated succesfully"}
 
 
@@ -39,7 +41,7 @@ class Phone:
 x=Phone()
 x.add_new('james',444)
 #print(x)
-x.delete('james')
+#x.delete('james')
 #x.view_contacts()
 #x.update_contacts('james',888)
 #p.delete_no('linda',555)
