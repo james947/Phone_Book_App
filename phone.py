@@ -27,9 +27,7 @@ class Phone:
 
     #update contacts
     def update_contacts(self,name,number):
-        found_contact=[contact for contact in self.contacts if self.contacts == number]
-        name = found_contact.name 
-        name =found_contact.number
+
         return {"message":"Contact updated succesfully"}
 
 
