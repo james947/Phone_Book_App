@@ -1,6 +1,9 @@
 class Phone:
+    count = 1
     def __init__(self):
         self.contacts= []
+        self.id =Phone.count 
+        Phone.count +=1
 
     def __str__(self):
         return str(self.__class__) + ": " + str(self.__dict__)
@@ -10,20 +13,25 @@ class Phone:
         add =dict(number=number,name=name)
         self.contacts.append(add)
         return {"message":"Business added succesfully"}
+
     #delete contact
     def delete(self,name):
         if name in self.contacts:
             self.contacts.remove(name)
             return {"message":"Contact deleted succesfully"}
+
     #view contacts
     def view_contacts(self):
         for numbers in self.contacts:
             return numbers
 
+    #update contacts
     def update_contacts(self,name,number):
-        for number in self.contacts:
-            if name == self.name and number == self.number:
-                self.name['']
+        found_contact=[contact for contact in self.contacts if self.contacts == number]
+        name = found_contact.name 
+        name =found_contact.number
+        return {"message":"Contact updated succesfully"}
+
 
         
 
@@ -32,11 +40,13 @@ class Phone:
 
 x=Phone()
 x.add_new('james',444)
-print(x)
-
+#print(x)
+#x.delete('james')
+#x.view_contacts()
+x.update_contacts('james',888)
 #p.delete_no('linda',555)
 #x.delete_no('james',555)
 
 #x.view_numbers()
 
-print 
+print (x)
