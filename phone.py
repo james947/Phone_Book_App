@@ -15,10 +15,17 @@ class Phone:
         if name in self.contacts:
             self.contacts.remove(name)
             return {"message":"Contact deleted succesfully"}
-
+    #view contacts
     def view_contacts(self):
         for numbers in self.contacts:
             return numbers
+
+    def update_contacts(self,name,number):
+        for number in self.contacts:
+            if name == self.name and number == self.number:
+                self.name['']
+
+        
 
     
 

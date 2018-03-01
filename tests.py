@@ -18,7 +18,13 @@ class PhoneTestCase(unittest.TestCase):
         new=Phone()
         response=new.add_new(name="james",number=555)
         response=new.view_contacts()
-        self.assertEqual(response,"james",555)
+        self.assertEqual(response,{'number': 555, 'name': 'james'})
+
+    def test_update_contacts(self):
+        new=Phone()
+        response=new.add_new(name="james",number=555)
+        response=new.update_contacts(name="ken",number=222)
+        self.assertEqual(response['message'], "Contact updated succesfully")
         
 
 
