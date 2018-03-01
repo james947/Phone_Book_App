@@ -4,7 +4,7 @@ class Phone:
         self.contacts= []
         self.id =Phone.count 
         Phone.count +=1
-
+    #prints the objects 
     def __str__(self):
         return str(self.__class__) + ": " + str(self.__dict__)
 
