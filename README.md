@@ -1,4 +1,5 @@
 PHONE APP
 ===
 
-Test
+Testing the crud functions of a phone app
+---
